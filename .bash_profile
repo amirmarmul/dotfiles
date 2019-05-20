@@ -1,3 +1,11 @@
+# Parse git branch
+function parse_git_branch() {
+   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:(\1)/'
+}
+
+# PS1 variable format 
+export PS1="\u:\[\033[34m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] "
+
 #  Commit everything
 function commit() {
    commitMessage="$1"
@@ -52,14 +60,6 @@ function mkd() {
    mkdir -p "$@" && cd "$@"
 }
 
-# Parse git branch
-function parse_git_branch() {
-   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:(\1)/'
-}
-
-# PS1 variable format 
-export PS1="\u:\[\033[34m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] "
-
 # PHP
 alias a="php artisan"
 alias c="composer"
@@ -108,11 +108,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias mirrorandroid="scrcpy -b1M -m800"
 
 # Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoredups
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
-export HISTORY_IGNORE="(ls|cd|cd -|pwd|exit|date|* --help)"
+#export HISTSIZE=32768
+#export HISTFILESIZE=$HISTSIZE
+#export HISTCONTROL=ignoredups
+#export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+#export HISTORY_IGNORE="(ls|cd|cd -|pwd|exit|date|* --help)"
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8"
@@ -124,3 +124,6 @@ export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
