@@ -1,0 +1,12 @@
+[core]
+  	excludesFile = ~/.dotfiles/git/gitignore
+[format]
+  	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[include]
+  	path = ~/.dotfiles/git/configs/alias.gitconfig
+  	path = ~/.dotfiles/git/configs/color.gitconfig
+  	path = ~/.dotfiles/git/configs/user.gitconfig
+[push]
+  	default = upstream
+[rerere]
+  	enabled = true
