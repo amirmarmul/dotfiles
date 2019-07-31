@@ -5,9 +5,13 @@
 	install-configs-bash
 
 help:
-	@echo "Usage: make install"
+	@echo "Usage: make [option]"
 	@echo
-	@echo "    install  Install dotfiles"
+	@echo "Options:"
+	@echo "  install		Install all dotfiles"
+	@echo "  install-configs	Install all configs dotfiles"
+	@echo "  install-configs-git 	Install git config dotfiles only"
+	@echo "  install-configs-bash	Install bash config dotfiles only"
 	@echo
 
 install: install-configs
