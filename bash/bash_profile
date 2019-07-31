@@ -83,8 +83,8 @@ alias gm="git merge"
 alias gb="git branch"
 alias gc="git checkout"
 alias gpo="git push origin"
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
+alias glog="git log"
 
 # Fast open
 alias o="open ."
