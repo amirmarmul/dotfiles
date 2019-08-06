@@ -112,6 +112,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Genymobile - Mirror your android device
 alias mirrorandroid="scrcpy -b1M -m800"
 
+# Finder tweak
+alias cleandesk="defaults write com.apple.finder CreateDesktop false; killall Finder;"
+alias messydesk="defaults write com.apple.finder CreateDesktop true; killall Finder;" 
 
 ## Mixin
 
