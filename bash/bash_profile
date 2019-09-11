@@ -131,5 +131,6 @@ export PATH="~/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/Users/amirmarmul/Library/Python/2.7/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
