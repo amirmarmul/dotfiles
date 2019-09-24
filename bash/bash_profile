@@ -63,7 +63,6 @@ function mkd() {
 
 # server list
 alias server.kcdev="ssh -i ~/.ssh/root_rsa root@kcdev.id"
-alias server.digitalocean="ssh amirmarmul@68.183.184.35"
 
 # PHP
 alias a="php artisan"
