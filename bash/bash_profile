@@ -64,6 +64,9 @@ function mkd() {
 # server list
 alias server.kcdev="ssh -i ~/.ssh/root_rsa root@kcdev.id"
 
+# node 
+alias npm="yarn"
+
 # PHP
 alias a="php artisan"
 alias c="composer"
@@ -117,8 +120,11 @@ alias messydesk="defaults write com.apple.finder CreateDesktop true; killall Fin
 
 ## Mixin
 
+# Custom terminal colors
+export LSCOLORS=GxfxcxdxBxegedabagaced
+
 # PS1 variable format
-export PS1="\u:\[\033[34m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] "
+export PS1="\u:\[\033[1;36m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] "
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8"
@@ -132,4 +138,4 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH="/Users/amirmarmul/Library/Python/3.7/bin:$PATH"
 export PATH="/Users/amirmarmul/anaconda3/bin:$PATH"
-
+export PATH="/Users/amirmarmul/.cargo/bin:$PATH"
