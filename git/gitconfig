@@ -1,12 +1,38 @@
 [core]
-  	excludesFile = ~/.dotfiles/git/gitignore
+  	excludesFile = ~/.gitignore
 [format]
   	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
-[include]
-  	path = ~/.dotfiles/git/configs/alias.gitconfig
-  	path = ~/.dotfiles/git/configs/color.gitconfig
-  	path = ~/.dotfiles/git/configs/user.gitconfig
 [push]
   	default = upstream
 [rerere]
   	enabled = true
+[alias]
+	amend = commit --amend
+  	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  	h1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  	h2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+  	log = log --graph --date=short
+  	new = checkout -b
+  	staged = diff --cached
+  	uncommit = reset --soft HEAD^
+  	unstage = reset HEAD
+  	unstaged = diff
+[color]
+  	ui = true
+[color "branch"]
+  	current = yellow reverse
+  	local = yellow
+  	remote = green
+[color "diff"]
+  	frag = magenta bold
+  	meta = yellow bold
+  	new = green
+  	old = red
+[color "status"]
+  	added = green
+  	changed = blue
+  	deleted = red
+  	untracked = magenta
+[user]
+	name = amirmarmul
+  	email = amiruddinmarmul@gmail.com
