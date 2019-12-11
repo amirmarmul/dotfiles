@@ -20,7 +20,7 @@ install-configs: install-configs-git install-configs-bash
 
 install-configs-git:
 	ln -sfn $(shell pwd)/git/gitconfig $(HOME)/.gitconfig
-	ln -sfn $(shell pwd)/git/gitignote $(HOME)/.gitignore
+	ln -sfn $(shell pwd)/git/gitignore $(HOME)/.gitignore
 
 install-configs-bash:
 	ln -sfn $(shell pwd)/bash/bash_profile $(HOME)/.profile
