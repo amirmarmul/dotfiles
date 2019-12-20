@@ -98,8 +98,9 @@ alias ls="ls -G"
 # VSCode
 alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
 
-# PhpStorm
+# JetBrain IDE
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias pycharm='open -a /Applications/PyCharm CE.app "`pwd`"'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
