@@ -61,9 +61,6 @@ function mkd() {
    mkdir -p "$@" && cd "$@"
 }
 
-# node 
-alias npm="yarn"
-
 # PHP
 alias a="php artisan"
 alias c="composer"
@@ -89,7 +86,6 @@ alias glog="git log"
 alias o="open ."
 
 # List all files colorized in long format
-alias ..="cd .."
 alias l="ls -Glh"
 alias ll="ls -Glh"
 alias la="ls -Galh"
@@ -100,7 +96,6 @@ alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
 
 # JetBrain IDE
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-alias pycharm='open -a /Applications/PyCharm CE.app "`pwd`"'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
