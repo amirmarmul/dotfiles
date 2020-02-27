@@ -4,8 +4,13 @@
 # ignore ide file setting and helper
 .idea
 .vscode
+.php_cs.cache
+.phpunit.result.cache
 _ide_helper.php
 _ide_helper_models.php
+nbproject/*
+!nbproject/project.properties
+!nbproject/project.xml
 
 # ignore node/grunt dependency directories
 node_modules/
