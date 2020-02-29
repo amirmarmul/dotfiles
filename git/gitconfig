@@ -1,5 +1,6 @@
 [core]
 	excludesfile = /Users/amirmarmul/.gitignore
+        pager = less -FRSX
 [format]
   	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [push]
@@ -19,20 +20,25 @@
   	unstaged = diff
 [color]
   	ui = true
+        diff = auto
+        status = auto
+        branch = auto
 [color "branch"]
   	current = yellow reverse
   	local = yellow
   	remote = green
 [color "diff"]
   	frag = magenta bold
-  	meta = yellow bold
-  	new = green
-  	old = red
+  	meta = yellow
+  	new = green bold
+  	old = red bold
 [color "status"]
-  	added = green
-  	changed = blue
+  	added = yellow
+  	changed = green
   	deleted = red
-  	untracked = magenta
+  	untracked = cyan
 [user]
 	name = amirmarmul
   	email = amiruddinmarmul@gmail.com
+[status]
+        relativePaths = false
