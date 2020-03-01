@@ -14,6 +14,7 @@ help:
 install: install-configs
 
 install-configs: install-config-git install-config-shell install-config-vim
+	ln -sfn $(shell pwd) $(HOME)/.dotfiles
 
 install-config-git:
 	ln -sfn $(shell pwd)/git/gitconfig $(HOME)/.gitconfig
