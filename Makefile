@@ -21,8 +21,8 @@ install-config-git:
 
 install-config-shell:
 	ln -sfn $(shell pwd)/shell/bash_profile $(HOME)/.bash_profile
-	ln -sfn $(shell pwd)/shell/aliases/aliases $(HOME)/.bash_aliases
-	ln -sfn $(shell pwd)/shell/functions/functions $(HOME)/.bash_functions
+	ln -sfn $(shell pwd)/shell/bash_aliases $(HOME)/.bash_aliases
+	ln -sfn $(shell pwd)/shell/bash_functions $(HOME)/.bash_functions
 
 install-config-vim:
 	ln -sfn $(shell pwd)/vim/vimrc $(HOME)/.vimrc
