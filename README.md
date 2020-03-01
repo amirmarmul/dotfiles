@@ -13,9 +13,3 @@ For macos defaults, you must execute manually:
 $ bash macos/set-defaults.sh
 ```
 
-## What's inside
-There's a few special files in this repo.
-- **vim config**
-- **bash config**
-- **git config**
-- **macos/set-defaults.sh**
