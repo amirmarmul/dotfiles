@@ -1,7 +1,3 @@
-# Alias definitions.
-# You may want to put all yout additions into a separate file like
-# ~/.aliases, instead of adding them directly.
-
 # PHP artisan
 if [ -f ~/.dotfiles/shell/aliases/artisan ]; then
     . ~/.dotfiles/shell/aliases/artisan
