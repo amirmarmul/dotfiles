@@ -20,7 +20,7 @@ install-config-git:
 	ln -sfn $(shell pwd)/git/gitignore $(HOME)/.gitignore
 
 install-config-shell:
-	ln -sfn $(shell pwd)/bash/bash_profile $(HOME)/.bashrc
+	ln -sfn $(shell pwd)/shell/bash_profile $(HOME)/.profile
 
 install-config-vim:
 	ln -sfn $(shell pwd)/vim/vimrc $(HOME)/.vimrc
