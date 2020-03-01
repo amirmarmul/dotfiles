@@ -1,0 +1,3 @@
+# PHP artisan 
+alias a="php artisan"
+alias mfs="php artisan migrate:fresh --seed"

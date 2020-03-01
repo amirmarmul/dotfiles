@@ -1,0 +1,8 @@
+# Git
+alias gm="git merge"
+alias gb="git branch"
+alias gc="git checkout"
+alias gpo="git push origin"
+alias glog="git log"
+alias nah="git reset --hard;git clean -df'"
+alias gds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"

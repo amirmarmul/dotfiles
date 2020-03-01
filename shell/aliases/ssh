@@ -1,0 +1,4 @@
+# SSH
+alias sshconfig="vi ~/.ssh/config"
+alias copykey="command cat ~/.ssh/id_rsa.pub | pbcopy"
+

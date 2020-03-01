@@ -1,127 +1,30 @@
 #!/bin/sh
 
-## Functions 
+# Function definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_functions, instead of adding them here directly.
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
 
-# Parse git branch
-function parse_git_branch() {
-   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:(\1)/'
-}
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
-#  Commit everything
-function commit() {
-   commitMessage="$1"
-
-   if [ "$commitMessage" = "" ]; then
-      commitMessage="wip"
-   fi
-
-   git add .
-   eval "git commit -a -m '${commitMessage}'"
-}
-
-# MySQL short command crud action
-function db {
-   if [ "$1" = "refresh" ]; then
-      mysql -uroot -e "drop database $2; create database $2"
-   elif [ "$1" = "create" ]; then
-      mysql -uroot -e "create database $2"
-   elif [ "$1" = "drop" ]; then
-      mysql -uroot -e "drop database $2"
-   fi
-}
-
-# Get current weather
-function weather() {
-   city="$1"
-
-   if [ -z "$city" ]; then
-      city="Bandung"
-   fi
-
-   eval "curl http://wttr.in/${city}"
-}
-
-# Create archive using zip
-function archive() {
-   zip -r "$1".zip -i "$1" ;
-}
-
-# Convert video to m4v
-function converttom4v() {
-   input="$1"
-   output="${input%.*}"
-
-   if [[ ! -z "$input" ]]; then
-      ffmpeg -i "${input}" -acodec copy -vcodec copy "${output}".m4v
-   fi
-}
-
-# Create a new directory and enter it
-function mkd() {
-   mkdir -p "$@" && cd "$@"
-}
-
-# PHP
-alias a="php artisan"
-alias c="composer"
-alias cu="composer update"
-alias cr="composer require"
-alias ci="composer install"
-alias cda="composer dump-autoload -o"
-alias mfs="php artisan migrate:fresh --seed"
-alias nah="git reset --hard;git clean -df'"
-alias sshconfig="vi ~/.ssh/config"
-alias copykey="command cat ~/.ssh/id_rsa.pub | pbcopy"
-alias mysqladm="mysql -u root"
-
-# Git
-alias gm="git merge"
-alias gb="git branch"
-alias gc="git checkout"
-alias gpo="git push origin"
-alias gds="find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch"
-alias glog="git log"
-
-# Fast open
-alias o="open ."
-
-# List all files colorized in long format
+# some more ls aliases
 alias l="ls -Glh"
 alias ll="ls -Glh"
 alias la="ls -Galh"
 alias ls="ls -G"
 
-# VSCode
-alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
-
-# JetBrain IDE
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-# Flush Directory Service cache
-alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
-
-# Lock the screen
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# Genymobile - Mirror your android device
-alias mirrorandroid="scrcpy -b1M -m800"
-
-# Tweak
-alias please="sudo"
-alias cleandesk="defaults write com.apple.finder CreateDesktop false; killall Finder;"
-alias messydesk="defaults write com.apple.finder CreateDesktop true; killall Finder;" 
-
-## Mixin
-
 # Custom terminal colors
 export LSCOLORS=GxfxcxdxBxegedabagaced
 
 # PS1 variable format
-export PS1="\h:\[\033[1;36m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] "
+export PS1="\h:\[\033[1;36m\]\w\[\033[32m\]\$(git_parse_branch)\[\033[00m\] "
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8"
