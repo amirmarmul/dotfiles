@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.dotfiles/git/gitignore
-        pager = less -FRSX
+        pager = less -+FX
 
 [format]
   	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
