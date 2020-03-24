@@ -1,3 +1,5 @@
 # PHP artisan 
 alias a="php artisan"
+alias artisan="php artisan"
+alias tinker="artisan tinker"
 alias mfs="php artisan migrate:fresh --seed"
