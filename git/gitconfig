@@ -1,9 +1,6 @@
 [core]
 	excludesfile = ~/.dotfiles/git/gitignore
-        pager = less -+FX
-
-[format]
-  	pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+	pager = less -+FX
 
 [push]
   	default = upstream
@@ -12,10 +9,9 @@
   	enabled = true
 
 [status]
-        relativePaths = false
+	relativePaths = false
 
 [include]
-        path = ~/.dotfiles/git/configs/alias.gitconfig	
+	path = ~/.dotfiles/git/configs/alias.gitconfig	
   	path = ~/.dotfiles/git/configs/color.gitconfig	
   	path = ~/.dotfiles/git/configs/user.gitconfig
-
