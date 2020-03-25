@@ -1,7 +1,7 @@
 [alias]
 	amend = commit --amend
   	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-  	gl = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(bold white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  	gl = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
   	new = checkout -b
   	staged = diff --cached
   	uncommit = reset --soft HEAD^
