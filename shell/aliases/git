@@ -1,7 +1,7 @@
 # Git
 alias gb="git branch"
 alias gc="git checkout"
-alias gl="git lg"
+alias gl="git gl"
 alias gm="git merge"
 alias gn="git new"
 alias gpo="git push origin"
