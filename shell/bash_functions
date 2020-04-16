@@ -42,3 +42,14 @@ function mkd() {
    mkdir -p "$@" && cd "$@"
 }
 
+# Decimal to Hexadecimal
+function dectohex() {
+   dec="$1"
+   bit="$2"
+
+   if [ -z "$bit" ]; then
+      bit="2"
+   fi
+
+   python -c "print(hex(${dec} << ${bit}))"
+}

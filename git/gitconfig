@@ -15,3 +15,9 @@
 	path = ~/.dotfiles/git/configs/alias.gitconfig	
   	path = ~/.dotfiles/git/configs/color.gitconfig	
   	path = ~/.dotfiles/git/configs/user.gitconfig
+[alias]
+	sync = !/usr/local/bin/legit sync
+	publish = !/usr/local/bin/legit publish
+	unpublish = !/usr/local/bin/legit unpublish
+	undo = !/usr/local/bin/legit undo
+	branches = !/usr/local/bin/legit branches
