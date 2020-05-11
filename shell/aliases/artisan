@@ -2,4 +2,6 @@
 alias a="php artisan"
 alias artisan="php artisan"
 alias tinker="artisan tinker"
-alias mfs="php artisan migrate:fresh --seed"
+alias mfs="artisan migrate:fresh --seed"
+alias p="artisan test"
+alias pf="artisan test --filter"
