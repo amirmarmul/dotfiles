@@ -3,5 +3,7 @@ alias a="php artisan"
 alias artisan="php artisan"
 alias tinker="artisan tinker"
 alias mfs="artisan migrate:fresh --seed"
-alias p="artisan test"
-alias pf="artisan test --filter"
+
+# PHP Unit Test 
+alias p="vendor/bin/phpunit"
+alias pf="vendor/bin/phpunit --filter"
