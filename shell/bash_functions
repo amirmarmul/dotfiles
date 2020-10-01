@@ -1,10 +1,10 @@
 # Git parse branch
-function git_parse_branch() {
+git_prompt_info() {
    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:(\1)/'
 }
 
 # Git commit
-function commit() {
+commit() {
    message="$1"
 
    if [ "$message" = "" ]; then
@@ -15,8 +15,8 @@ function commit() {
    eval "git commit -a -m '${message}'"
 }
 
-# MySQL
-function db() {
+# Database
+db() {
    if [ "$1" = "refresh" ]; then
       mysql -uroot -e "drop database $2; create database $2"
    elif [ "$1" = "create" ]; then
@@ -26,7 +26,7 @@ function db() {
    fi
 }
 
-opendb () {
+opendb() {
    [ ! -f .env ] && { echo "No .env file found."; exit 1; }
 
    DB_CONNECTION=$(grep DB_CONNECTION .env | grep -v -e '^\s*#' | cut -d '=' -f 2-)
@@ -43,7 +43,7 @@ opendb () {
 }
 
 # Weather
-function weather() {
+weather() {
    city="$1"
 
    if [ -z "$city" ]; then
@@ -54,12 +54,12 @@ function weather() {
 }
 
 # Create directory
-function mkd() {
+mkd() {
    mkdir -p "$@" && cd "$@"
 }
 
 # Decimal to Hexadecimal
-function dectohex() {
+dectohex() {
    dec="$1"
    bit="$2"
 
