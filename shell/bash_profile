@@ -19,7 +19,6 @@ alias l="ls -Glh"
 alias ll="ls -Glh"
 alias la="ls -Galh"
 alias ls="ls -G"
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Custom terminal colors
 export LSCOLORS=GxfxcxdxBxegedabagaced
