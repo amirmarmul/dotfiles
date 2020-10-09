@@ -21,10 +21,10 @@ alias la="ls -Galh"
 alias ls="ls -G"
 
 # Custom terminal colors
-export LSCOLORS=GxfxcxdxBxegedabagaced
+export LSCOLORS=gxfxcxdxbxegedabagaced
 
 # PS1 variable format
-export PS1="\h:➜ \[\033[1;36m\]\W\[\033[32m\]\$(git_prompt_info)\[\033[0m\] "
+export PS1="\h: \[\033[36m\]\W\[\033[32m\]\$(git_prompt_info)\[\033[0m\] "
 
 # Prefer US English and use UTF-8
 export LANG="en_US.UTF-8"

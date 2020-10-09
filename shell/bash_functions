@@ -1,6 +1,6 @@
 # Git parse branch
 git_prompt_info() {
-   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ git:(\1)/'
+   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [git:\1]/'
 }
 
 # Git commit
